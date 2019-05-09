@@ -12,7 +12,11 @@ class User < ActiveRecord::Base
   end
 
   def see_my_favorites
-    puts Favorite.find_by(user: self)
+    # $user = User.find($user.id)
+    system "clear"
+    $user.quotes.each { |q| puts q.quote_text }
+    print "\n Press ENTER to continue..."
+    gets
   end
 
   def delete_a_favorite(id)
