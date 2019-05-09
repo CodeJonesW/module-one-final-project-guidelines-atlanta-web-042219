@@ -2,7 +2,7 @@ class GVController
 
     def self.start
       puts "Whats your username?"
-      $user = User.create(name: gets.chomp)
+      $user = User.create(name: gets.chomp.capitalize)
       main_menu
     end
 
@@ -31,10 +31,16 @@ class GVController
         end
     when 2
       puts $user.see_my_favorites
+
     when 3
-      id_to_get_deleted = gets.chomp.to_i
-      $user.delete_a_favorite(id_to_get_deleted)
-      puts $user.see_my_favorites
+      puts 'Enter favorite id. If you do not know your quote id, type "back" and you can find the ID
+      in your favorites.'
+      id_to_get_deleted = gets.chomp
+      if id_to_get_deleted == 'back'
+        main_menu
+      else
+      $user.delete_a_favorite(id_to_get_deleted.to_i)
+    end
     when 4
       exit
   else
