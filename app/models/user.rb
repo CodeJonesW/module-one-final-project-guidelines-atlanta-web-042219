@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
   has_many :quotes, through: :favorites
 
   def random_quote
-    puts Quote.all.sample
+    Quote.all.sample
   end
 
   def favorite_a_quote(id)
@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
   end
 
   def see_my_favorites
-    Favorite.find_by(user: self)
+    puts Favorite.find_by(user: self)
   end
 
   def delete_a_favorite(id)

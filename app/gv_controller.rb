@@ -18,7 +18,8 @@ class GVController
   case (choice.to_i)
     when 1
       random_quote = $user.random_quote
-      puts random_quote
+      puts random_quote.quote_text
+      
       puts "Would you like to favorite this quote? yes or no."
         answer1 = gets.chomp
         if answer1 == 'yes'
@@ -26,10 +27,10 @@ class GVController
         elsif answer1 == 'no'
           main_menu
         else
-          "Thats not an option"
+          "Thats not an option."
         end
     when 2
-      puts $user.see_my_favorites
+      $user.see_my_favorites
     when 3
       id_to_get_deleted = gets.chomp.to_i
       $user.delete_a_favorite(id_to_get_deleted)
