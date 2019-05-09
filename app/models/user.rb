@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
 
   def favorite_a_quote(id)
     Favorite.create(user_id: self.id, quote_id: id)
+    $user = User.find($user.id)
   end
 
   def see_my_favorites
@@ -16,6 +17,7 @@ class User < ActiveRecord::Base
 
   def delete_a_favorite(id)
     Favorite.find_by(user_id: self.id, quote_id: id).destroy
+    $user = User.find($user.id)
   end
 
 
