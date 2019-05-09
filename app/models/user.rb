@@ -6,8 +6,8 @@ class User < ActiveRecord::Base
     Quote.all.sample
   end
 
-  def favorite_a_quote(quote)
-    Favorite.create(user: self, quote: quote)
+  def favorite_a_quote(id)
+    Favorite.create(user_id: self.id, quote_id: id)
   end
 
   def see_my_favorites
@@ -15,7 +15,6 @@ class User < ActiveRecord::Base
   end
 
   def delete_a_favorite(id)
-    binding.pry
     Favorite.find_by(user_id: self.id, quote_id: id).destroy
   end
 
