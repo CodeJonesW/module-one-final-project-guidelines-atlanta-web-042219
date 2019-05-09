@@ -14,4 +14,13 @@ class User < ActiveRecord::Base
     Favorite.find_by(user: self)
   end
 
+  def delete_a_favorite(id)
+    binding.pry
+    Favorite.find_by(user_id: self.id, quote_id: id).destroy
+  end
+
+
+
+
+
 end
