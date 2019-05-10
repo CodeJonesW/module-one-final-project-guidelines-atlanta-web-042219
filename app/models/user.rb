@@ -18,10 +18,6 @@ class User < ActiveRecord::Base
     gets
   end
 
-  # def see_my_favorite_quote_ids
-  #   $user.quotes.each { |quote_obj| puts quote_obj.quote_id }
-  # end
-
   def delete_a_favorite(id)
     if Favorite.find_by(user_id: self.id, quote_id: id) == nil
       puts "That quote has not been favorited yet!"

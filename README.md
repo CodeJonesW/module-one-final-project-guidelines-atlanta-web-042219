@@ -1,4 +1,36 @@
-# Module One Final Project Guidelines
+Good Vibes README!!!!!
+______________________________________
+Required Gems!!
+"sinatra-activerecord"
+"sqlite3"
+"require_all"
+source "https://rubygems.org"
+______________________________________________________________
+Description:
+Good Vibes is a quote generator that allows a user to create a list of quotes. Users
+can reference all their favorite quotes. Create or delete a favorite in order to update their favorites list.
+Good Vibes aims to be a source of inspiration for all people.
+____________________________________________________________________________________________
+Contributors: Will Jones and Blake Stoner
+__________________________________________
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Congratulations, you're at the end of module one! You've worked crazy hard to get here and have learned a ton.
 

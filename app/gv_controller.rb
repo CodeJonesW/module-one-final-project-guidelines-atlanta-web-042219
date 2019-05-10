@@ -34,7 +34,7 @@ _(____/___(___/_(___/_(___/________|/____/___(___/_(___ _(__)_
       random_quote = $user.random_quote
       puts random_quote.quote_text
 
-      puts "Would you like to favorite this quote? yes or no."
+      puts "Would you like to favorite this quote? yes or no. Press any key to return to Main Menu"
         answer1 = gets.chomp
         if answer1 == 'yes'
           $user.favorite_a_quote(random_quote.id)
