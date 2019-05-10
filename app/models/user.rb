@@ -23,8 +23,8 @@ class User < ActiveRecord::Base
       puts "That quote has not been favorited yet!"
       sleep(2)
     else
-    Favorite.find_by(user_id: self.id, quote_id: id).destroy
-    $user = User.find($user.id)
+      Favorite.find_by(user_id: self.id, quote_id: id).destroy
+      $user = User.find($user.id)
     end
   end
 
