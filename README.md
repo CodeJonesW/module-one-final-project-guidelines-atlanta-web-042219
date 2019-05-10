@@ -6,7 +6,7 @@ Required Gems!!
 "require_all"
 source "https://rubygems.org"
 
-Run bundle install to install associated 
+Run bundle install to install associated gems
 ______________________________________________________________
 Description:
 Good Vibes is a quote generator that allows a user to create a list of quotes. Users
