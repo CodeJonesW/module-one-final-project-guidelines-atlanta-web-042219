@@ -9,6 +9,6 @@ Quote.create(quote_text: "Success is never final. Failure is never fatal. It is 
 Quote.create(quote_text: "Edison failed 10, 000 times before he made the electric light. Do not be discouraged if you fail a few times.")
 Quote.create(quote_text: "Out of clutter, find Simplicity. From discord, find Harmony. In the middle of difficulty lies Opportunity.")
 Quote.create(quote_text: "Belief creates the actual fact.")
-Quote.create(quote_text: "Don't judge each day by the harvest you reap but by the seeds that you plant."
+Quote.create(quote_text: "Don't judge each day by the harvest you reap but by the seeds that you plant.")
 Quote.create(quote_text: "The best way out is always through.")
 Quote.create(quote_text: "With self-discipline most anything is possible.")
