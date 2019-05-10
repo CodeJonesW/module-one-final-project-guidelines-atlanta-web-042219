@@ -8,8 +8,8 @@ source "https://rubygems.org"
 ______________________________________________________________
 Description:
 Good Vibes is a quote generator that allows a user to create a list of quotes. Users
-can reference all their favorite quotes. Create or delete a favorite in order to update their favorites list.
-Good Vibes aims to be a source of inspiration for all people.
+can reference all their favorite quotes. Users can create or delete a favorite in order to update their favorites list.
+We aim to bring an objective perspective to people in a variety situations. Allowing a source of inspiration to alter one's own perspective is a great way to take a momentary breathe, think about how to conquer the task at hand, and see the light at the end of the tunnel. 
 ____________________________________________________________________________________________
 Contributors: Will Jones and Blake Stoner
 __________________________________________

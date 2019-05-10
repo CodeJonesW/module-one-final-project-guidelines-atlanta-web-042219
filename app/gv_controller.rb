@@ -21,6 +21,9 @@ _(____/___(___/_(___/_(___/________|/____/___(___/_(___ _(__)_
 
     def self.main_menu
       system "clear"
+
+      puts "Enter number of your selection below."
+
       puts "Good Vibes Menu"
       puts "1. Random Motivational quotes"
       puts "2. Favorite quotes"
