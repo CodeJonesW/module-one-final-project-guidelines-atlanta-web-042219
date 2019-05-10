@@ -2,16 +2,19 @@ class GVController
 
     def self.start
       system "clear"
-puts "     ________                  .___ ____   ___._____.
- /  _____/  ____   ____   __| _/ \   \ /   |__\_ |__   ____   ______
-/   \  ___ /  _ \ /  _ \ / __ |   \   Y   /|  || __ \_/ __ \ /  ___/
-\    \_\  (  <_> (  <_> / /_/ |    \     / |  || \_\ \  ___/ \___ \
- \______  /\____/ \____/\____ |     \___/  |__||___  /\___  /____  >
-        \/                   \/                    \/     \/     \/
+var = <<-BLAH
+______________________________________________________________
+      __                           _    _
+    /    )                   /     |   /    ,   /
+---/---------__----__----__-/------|--/--------/__----__---__-
+  /  --,   /   ) /   ) /   /       | /    /   /   ) /___) (_ `
+_(____/___(___/_(___/_(___/________|/____/___(___/_(___ _(__)_
 
-"
+                                                              
+    BLAH
+    puts var
 
-      puts "Hello! Whats your name?! Im going to store it for your own benefit. I won't sell your data..."
+      puts "Hello, Welcome to Good Vibes! Whats your name?!"
       $user = User.create(name: gets.chomp.capitalize)
       main_menu
     end
