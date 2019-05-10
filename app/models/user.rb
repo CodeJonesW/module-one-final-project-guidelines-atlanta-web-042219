@@ -13,17 +13,22 @@ class User < ActiveRecord::Base
 
   def see_my_favorites
     system "clear"
-    $user.quotes.each { |q| puts q.quote_text }
+    $user.quotes.each { |quote_obj| puts "#{quote_obj.id}. #{quote_obj.quote_text}"}
     print "\n Press ENTER to continue..."
     gets
   end
 
-  # def see_my_favorites_ids
-  #   $user.favorites.each { |f| puts f.favorite_id }
+  # def see_my_favorite_quote_ids
+  #   $user.quotes.each { |quote_obj| puts quote_obj.quote_id }
+  # end
 
   def delete_a_favorite(id)
+    if id == nil
+      puts "That quote has not been favorited yet!"
+    else
     Favorite.find_by(user_id: self.id, quote_id: id).destroy
     $user = User.find($user.id)
+    end
   end
 
 
