@@ -6,21 +6,31 @@ class User < ActiveRecord::Base
     Quote.all.sample
   end
 
-  def favorite_a_quote(quote)
-    Favorite.create(user: self, quote: quote)
+  def favorite_a_quote(id)
+    Favorite.create(user_id: self.id, quote_id: id)
+    $user = User.find($user.id)
   end
 
   def see_my_favorites
-    Favorite.find_by(user: self)
+    system "clear"
+    $user.quotes.each { |quote_obj| puts "#{quote_obj.id}. #{quote_obj.quote_text}"}
+    print "\n Press ENTER to continue..."
+    gets
   end
+
+  # def see_my_favorite_quote_ids
+  #   $user.quotes.each { |quote_obj| puts quote_obj.quote_id }
+  # end
 
   def delete_a_favorite(id)
-    binding.pry
+    if Favorite.find_by(user_id: self.id, quote_id: id) == nil
+      puts "That quote has not been favorited yet!"
+      sleep(2)
+    else
     Favorite.find_by(user_id: self.id, quote_id: id).destroy
+    $user = User.find($user.id)
+    end
   end
-
-
-
 
 
 end
