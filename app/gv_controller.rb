@@ -10,9 +10,9 @@ ______________________________________________________________
   /  --,   /   ) /   ) /   /       | /    /   /   ) /___) (_ `
 _(____/___(___/_(___/_(___/________|/____/___(___/_(___ _(__)_
 
-                                                              
     BLAH
     puts var
+    system("afplay ~/Desktop/goodvibes.mp3")
 
       puts "Hello, Welcome to Good Vibes! Whats your name?!"
       $user = User.create(name: gets.chomp.capitalize)
