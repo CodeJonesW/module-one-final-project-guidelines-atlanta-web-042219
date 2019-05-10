@@ -29,4 +29,10 @@ class User < ActiveRecord::Base
   end
 
 
+  def create_a_quote(quote_text)
+    new_quote = Quote.new(quote_text)
+    $user.favorite_a_quote(new_quote)
+  end
+
+
 end
