@@ -10,9 +10,9 @@ ______________________________________________________________
   /  --,   /   ) /   ) /   /       | /    /   /   ) /___) (_ `
 _(____/___(___/_(___/_(___/________|/____/___(___/_(___ _(__)_
 
-                                                              
     BLAH
     puts var
+    system("afplay ~/Desktop/goodvibes.mp3")
 
       puts "Hello, Welcome to Good Vibes! Whats your name?!"
       $user = User.create(name: gets.chomp.capitalize)
@@ -21,6 +21,9 @@ _(____/___(___/_(___/_(___/________|/____/___(___/_(___ _(__)_
 
     def self.main_menu
       system "clear"
+
+      puts "Enter number of your selection below."
+
       puts "Good Vibes Menu"
       puts "1. Random Motivational quotes"
       puts "2. Favorite quotes"
@@ -34,7 +37,7 @@ _(____/___(___/_(___/_(___/________|/____/___(___/_(___ _(__)_
       random_quote = $user.random_quote
       puts random_quote.quote_text
 
-      puts "Would you like to favorite this quote? yes or no."
+      puts "Would you like to favorite this quote? yes or no. Press any key to return to Main Menu"
         answer1 = gets.chomp
         if answer1 == 'yes'
           $user.favorite_a_quote(random_quote.id)
