@@ -28,7 +28,8 @@ _(____/___(___/_(___/_(___/________|/____/___(___/_(___ _(__)_
       puts "1. Random Motivational quotes"
       puts "2. Favorite quotes"
       puts "3. Remove a favorite quote : ("
-      puts "4. Exit"
+      puts "4. Create a Quote"
+      puts "5. Exit"
 
   choice = gets.chomp
 
@@ -59,8 +60,12 @@ _(____/___(___/_(___/_(___/________|/____/___(___/_(___ _(__)_
         main_menu
       else
       $user.delete_a_favorite(id_to_get_deleted.to_i)
-    end
+      end
     when 4
+      puts "Enter your quote"
+      quote = gets.chomp
+      $user.create_a_quote(quote_text: quote)
+    when 5
       exit
   else
     puts "invalid entry"
