@@ -30,8 +30,8 @@ class User < ActiveRecord::Base
 
 
   def create_a_quote(quote_text)
-    new_quote = Quote.new(quote_text)
-    $user.favorite_a_quote(new_quote)
+    new_quote = Quote.create(quote_text)
+    $user.favorite_a_quote(new_quote.id)
   end
 
 
